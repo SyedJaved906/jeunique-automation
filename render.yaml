@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: jeunique-automation
+    env: node
+    plan: free
+    buildCommand: npm install && npx playwright install
+    startCommand: npm start
+    env:
+      - key: JEUNIQUE_URL
+      - key: JEUNIQUE_USERNAME
+      - key: JEUNIQUE_PASSWORD
+      - key: PORT
